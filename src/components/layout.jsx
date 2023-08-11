@@ -30,8 +30,8 @@ function LayoutComponent({ navClass }) {
                                 İletişim
                             </Link>
                             <Link
-                                to="/basket"
-                                className={`nav-item nav-link ${location.pathname === '/basket' ? 'actived' : ''}`}
+                                to="/projects"
+                                className={`nav-item nav-link ${location.pathname === '/projects' ? 'actived' : ''}`}
                             >
                                 Projelerimiz
                             </Link>

@@ -3,9 +3,9 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import {BrowserRouter, Route,Routes} from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
-import LayoutComponent from './components/layout';
 import HomePage from './pages/home';
 import ContactPage from './pages/contact';
+import ProjectPage from './pages/project';
 
 function AppComponent (){
   return (
@@ -16,6 +16,7 @@ function AppComponent (){
         <Route index element={<HomePage/>}></Route>
         <Route  path='home' element={<HomePage/>}></Route>
         <Route  path='contact' element={<ContactPage/>}></Route>
+        <Route  path='projects' element={<ProjectPage/>}></Route>
       </Route>
     </Routes>
 

@@ -8,18 +8,19 @@ function SliderComponent() {
             <div className='slider'>
                 <Carousel height={260} width={880} yOrigin={42} yRadius={48} autoPlay={true} aut>
                     <div key={1} >
-                        <h3 className="slider-info">Güvenli Alışveriş</h3>
-                        <img width={250} src='../css/images/laptop.png' alt="" />
+                        <h3 className="slider-info">Hızlı Çözüm</h3>
+                        <img className="slider-image" src="../css/images/fast.jpg" alt="" />
+ 
                     </div>
                 <div key={2} >
-                    <a href="">
-                        <img width={250} src='../css/images/shoes.png' alt="" />
-                    </a>
+                    <h3 className="slider-info">Kaliteli Hizmet</h3>
+                    <img className="slider-image" src="../css/images/work.jpg" alt="" />
+ 
                 </div>
                 <div key={3} >
-                    <Link>
-                        <img width={250} src='../css/images/t-shirt.png' alt="" />
-                    </Link>
+                    <h3 className="slider-info">Mutlu Müşteri</h3>
+                    <img className="slider-image" src="../css/images/happy.jpg" alt="" />
+ 
                 </div>
             </Carousel>
         </div>

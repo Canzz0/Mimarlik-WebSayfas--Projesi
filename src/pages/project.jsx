@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { Parallax, ParallaxLayer } from '@react-spring/parallax'
-import ContactComponent from '../components/contact';
+import ProjectComponent from '../components/project';
 import FooterComponent from '../components/footer';
 import LayoutComponent from '../components/layout';
-function ContactPage() {
+function ProjectPage() {
     document.getElementById('root').style.backgroundColor='white';
-    const [activeTab, setActiveTab] = useState('contact'); // Başlangıçta "home" aktif
+    const [activeTab] = useState('project'); // Başlangıçta "home" aktif
     return (
         <>
             <LayoutComponent navClass={activeTab} />
-            <ContactComponent/>
+            <ProjectComponent/>
             <FooterComponent/>
        </>
     )
 }
-export default ContactPage;
+export default ProjectPage;

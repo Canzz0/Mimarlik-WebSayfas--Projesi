@@ -13,16 +13,9 @@ return(
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, facilis.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, facilis.
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, facilis.
-        </p>
-        
+        </p>       
     </div>
-    
-    
-    
     </>
 )
-
 }
-
-
 export default AboutComponent;
