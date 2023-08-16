@@ -473,7 +473,6 @@ h1 {
 }
 
 .footer .social>a {
-  padding: 5px;
   margin: 5px;
   font-size: 50px;
   width: 75px;
@@ -482,7 +481,6 @@ h1 {
   display: inline-block;
   text-align: center;
   border-radius: 50%;
-  border: 1px groove rgb(255, 217, 0);
   color: inherit;
   opacity: 0.45;
   transition: all 0.3s;
@@ -607,6 +605,12 @@ _______--------------______________
   }
   .footer-title {
     display: none;
+  }
+  .footer .social>a {
+    padding: 0;
+    font-size: 25px;
+    height: 50px;
+    width: 50px;
   }
 
   .project-container {
