@@ -4,7 +4,7 @@ function Info1Component(){
         <>
         <div className="row">
             <div className="info-place">
-                <div className="info-text tex-center  col-8">
+                <div className="info-text tex-center ">
                 <h2 className="info-title">Hizmetlerimiz</h2>
                 <span >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quibusdam sunt animi quaerat 
@@ -13,7 +13,7 @@ function Info1Component(){
                     vel totam, aliquid, veniam id velit maxime mollitia quo impedit repudiandae? Nemo, nisi!
                 </span>
                 </div>
-                <div className="col-4">
+                <div className="info-image-place">
                     <img className="info-image" src="../css/images/bina-2.png" alt="" />
                 </div>
             </div>

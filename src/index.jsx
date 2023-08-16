@@ -6,6 +6,9 @@ import reportWebVitals from './reportWebVitals';
 import HomePage from './pages/home';
 import ContactPage from './pages/contact';
 import ProjectPage from './pages/project';
+import HotelRoom1 from './pages/hotelroom1/hotelroom1';
+import Museum from './pages/museum/museum';
+import HotelRoom2 from './pages/hotelroom2/hotelroom2';
 
 function AppComponent (){
   return (
@@ -17,6 +20,11 @@ function AppComponent (){
         <Route  path='home' element={<HomePage/>}></Route>
         <Route  path='contact' element={<ContactPage/>}></Route>
         <Route  path='projects' element={<ProjectPage/>}></Route>
+        <Route  path='hotelprojectdetail' element={<HotelRoom1/>}></Route>
+        <Route  path='museumprojectdetail' element={<Museum/>}></Route>
+        <Route  path='hotel2projectdetail' element={<HotelRoom2/>}></Route>
+
+
       </Route>
     </Routes>
 

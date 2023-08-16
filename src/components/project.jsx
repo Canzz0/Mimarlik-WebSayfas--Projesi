@@ -1,60 +1,50 @@
-import { FiCodepen } from "react-icons/fi";
+import React from 'react';
+import { Link } from 'react-router-dom';
 function ProjectComponent() {
     return (
         <>
             <h1 className="project-title">Projelerimiz</h1>
-            <div className="container">
-                <div class="cardBox">
+            <div className="project-container">
+                <Link to='/hotelprojectdetail'>
+                <div class="cardBox mb-2">
                     <div class="card">
-                        <h2>Banyo Projesi</h2>
+                        <h2>Otel Odası Projesi</h2>
                         <span></span>
                         <div class="card-content">
-                            <h3>Banyo Projesi</h3>
+                            <h3>Otel Odası Projesi</h3>
+                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui minima ad totam veritatis assumenda!</p>
+                        </div>
+
+                    </div>
+                </div>
+                </Link>
+                <Link to='/museumprojectdetail'>
+                <div  class="cardBox  mb-2">
+                    <div id="museum" class="card">
+                        <h2>Müze Projesi</h2>
+                        <span></span>
+                        <div class="card-content">
+                            <h3>Müze Projesi</h3>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui minima ad totam veritatis assumenda!</p>
                         </div>
                     </div>
                 </div>
-                <div class="cardBox">
-                    <div class="card">
-                        <h2>Banyo Projesi</h2>
+                </Link>
+                <Link to='/hotel2projectdetail'>
+                <div class="cardBox  mb-2">
+                    <div id="room2" class="card">
+                        <h2>Otel Odası Projesi</h2>
                         <span></span>
                         <div class="card-content">
-                            <h3>Banyo Projesi</h3>
+                            <h3>Otel Odası Projesi</h3>
                             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui minima ad totam veritatis assumenda!</p>
                         </div>
                     </div>
                 </div>
-                <div class="cardBox">
-                    <div class="card">
-                        <h2>Banyo Projesi</h2>
-                        <span></span>
-                        <div class="card-content">
-                            <h3>Banyo Projesi</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui minima ad totam veritatis assumenda!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cardBox">
-                    <div class="card">
-                        <h2>Banyo Projesi</h2>
-                        <span></span>
-                        <div class="card-content">
-                            <h3>Banyo Projesi</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui minima ad totam veritatis assumenda!</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="cardBox">
-                    <div class="card">
-                        <h2>Banyo Projesi</h2>
-                        <span></span>
-                        <div class="card-content">
-                            <h3>Banyo Projesi</h3>
-                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui minima ad totam veritatis assumenda!</p>
-                        </div>
-                    </div>
-                </div>
+                </Link>
+               
             </div>
+
 
         </>
     )

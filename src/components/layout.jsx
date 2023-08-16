@@ -22,7 +22,6 @@ function LayoutComponent({ navClass }) {
                             >
                                 Anasayfa
                             </Link>
-
                             <Link
                                 to="/contact"
                                 className={`nav-item nav-link ${location.pathname === '/contact' ? 'actived' : ''}`}

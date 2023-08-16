@@ -12,7 +12,9 @@ function FooterComponent(){
             <span class="footer-text"> 
                 'Kaliteli Hizmetin Tek Adresi'
             </span>
-            <p class="copyright">Mimarlık Ofisi © 2018</p>
+            <div className="row">
+            <h3 className="footer-title"> Mimarlık Ofisi © 2018</h3>
+            </div>
         </footer>
     </div>
   

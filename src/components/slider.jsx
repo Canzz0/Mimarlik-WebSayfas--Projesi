@@ -6,7 +6,7 @@ function SliderComponent() {
         <>
             <h1 className="slider-title">Hizmetlerimiz</h1>
             <div className='slider'>
-                <Carousel height={260} width={880} yOrigin={42} yRadius={48} autoPlay={true} aut>
+                <Carousel height={240} width={830} yOrigin={42} yRadius={48} autoPlay={true} aut>
                     <div key={1} >
                         <h3 className="slider-info">Hızlı Çözüm</h3>
                         <img className="slider-image" src="../css/images/fast.jpg" alt="" />

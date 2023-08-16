@@ -2,11 +2,11 @@ function Info2Component(){
     return(
         <>
         <div className="row ">
-            <div className="info-place">
-                <div className="col-4 p-4">
+            <div className="info-place p-2">
+                <div className="info-image-place">
                 <img className="info-image" src="../css/images/bina-2.png" alt="" />
                 </div>
-                <div className="info-text  col-8 ">
+                <div className="info-text  ">
                 <h2 className="info-title">Hizmetlerimiz</h2>
                 <span className="text-center" >
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum quibusdam sunt animi quaerat 

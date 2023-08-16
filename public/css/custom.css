@@ -178,7 +178,8 @@ h1 {
   border-width: 0px 0px 4px;
 }
 
-.container {
+.project-container {
+  margin: 5%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   /* 3 sütunlu grid */
@@ -188,23 +189,49 @@ h1 {
 
 .cardBox {
   width: 300px;
-  height: 400px;
+  height: 350px;
   position: relative;
   display: grid;
   place-items: center;
   overflow: hidden;
-  border-radius: 20px;
-  border-color: #000000;
+  background-color: rgb(0, 0, 0);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px,
     rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
+    animation: cardbox-loader 1.5s;
 }
 
+/* FOR PC */
+@keyframes cardbox-loader {
+  from{
+    margin-left: 100%;
+   
+  }
+  to{
+    margin-left: 0%;
+  }
+}
+/* //////////////////// */
+
+/* FOR MOBİLE */
+@keyframes mobilecardbox-loader {
+  from{
+    margin-top: 100%;
+   
+  }
+  to{
+    margin-top: 0%;
+  }
+}
+/* ////////////////////// */
+
 .card {
+  background: url('../css/images/hotelroom.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
   display: grid;
   position: absolute;
-  width: 95%;
-  height: 95%;
-  background: #f9f9f9;
+  width: 85%;
+  height: 85%;
   border-radius: 20px;
   display: flex;
   justify-content: center;
@@ -212,11 +239,28 @@ h1 {
   text-align: center;
   color: #ffffff;
   overflow: hidden;
-  padding: 20px;
   cursor: pointer;
   border-color: #000000;
-  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.5) 0px 18px 36px -18px inset;
+  animation: card-loader 1.8s;
+}
+@keyframes card-loader {
+  from{
+   opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+/* farklı fotoğraflar kullanabilmek için */
+#museum{
+    background: url('../css/images/museum.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#room2{
+  background: url('../css/images/hotelroom2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .card h2,
@@ -228,16 +272,16 @@ h1 {
   font-size: 3rem;
   font-weight: 800;
   pointer-events: none;
-  opacity: 0.5;
+  opacity: 0.8;
 }
 
 .card .card-content h3 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding-bottom: 10px;
 }
 
 .card .card-content p {
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   line-height: 25px;
 }
 
@@ -248,8 +292,11 @@ h1 {
 }
 
 .card:hover .card-content {
+  padding: 23px;
+  background-color: black;
+  color: white;
   transform: translateY(0);
-  opacity: 1;
+  opacity: 0.68;
 }
 
 .card:hover h2,
@@ -257,12 +304,15 @@ h1 {
   opacity: 0;
 }
 
+
+
 .cardBox::before {
   content: "";
   position: absolute;
   width: 40%;
   height: 150%;
-  background: rgb(255, 217, 0);
+  background: rgb(255, 196, 0);
+  ;
   animation: glowing01 5s linear infinite;
   transform-origin: center;
   animation: glowing 5s linear infinite;
@@ -326,7 +376,8 @@ h1 {
   border-radius: 7px;
   border: none;
 }
-.slider-image{
+
+.slider-image {
   margin: 20px;
   border: solid 25px;
   width: 50%;
@@ -334,6 +385,7 @@ h1 {
   transition: all 1s;
   transform: skewX(5deg);
 }
+
 /* //////////////////////////// */
 /* FOOTER */
 .footer {
@@ -394,7 +446,9 @@ h1 {
   border-radius: 50%;
   border: 1px groove rgb(255, 217, 0);
   color: inherit;
-  opacity: 0.75;
+  opacity: 0.45;
+  transition: all 0.3s;
+
 }
 
 .footer-text {
@@ -405,26 +459,31 @@ h1 {
 }
 
 .footer .social>a:hover {
-  opacity: 0.9;
+  opacity: 1.2;
 }
 
-.footer .copyright {
-  margin-top: 15px;
-  text-align: center;
-  font-size: 13px;
-  color: rgb(255, 217, 0);
-  margin-bottom: 0;
+.footer .footer-title {
+  margin-top: 10%;
+  font-size: 65px;
 }
 
 /* /////////////////////////// */
 
 /* INFO */
-.info-place{
+.info-place {
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 15px;
 }
-.info-image{
+
+.info-image-place {
+  padding: 1.5rem;
+  width: 33%;
+
+}
+
+.info-image {
   margin: 20px;
   border: solid 25px;
   width: 550px;
@@ -432,24 +491,28 @@ h1 {
   transition: all 1s;
   transform: skewX(5deg);
 }
-.info-text{
+
+.info-text {
+  width: 66.66666667%;
   padding: 15px;
   margin-top: 15px;
   text-align: center;
   font-size: 20px;
 }
-.info-title{
+
+.info-title {
   font-size: 30px;
-    margin: 20px;
-    width: max-content;
-    color: rgb(0, 0, 0);
-    font-family: "Playfair Display";
-    border-color: rgb(0, 0, 0);
-    border-bottom: 4px solid #000000;
-    border-style: solid;
-    border-width: 0px 0px 4px;
-    
-  }
+  margin: 20px;
+  width: max-content;
+  color: rgb(0, 0, 0);
+  font-family: "Playfair Display";
+  border-color: rgb(0, 0, 0);
+  border-bottom: 4px solid #000000;
+  border-style: solid;
+  border-width: 0px 0px 4px;
+
+}
+
 /* /////////////////////////// */
 
 
@@ -466,20 +529,50 @@ _______--------------______________
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ 
 */
 @media only screen and (max-width: 1000px) {
-  .title-row{
+  .navbar-toggler {
+    background-color: white;
+  }
+
+  .about p {
+    font-size: 100%;
+  }
+
+  .title-row {
     width: auto;
     height: auto;
   }
-  .info-place{
+
+  .info-place {
+    padding: 0;
     grid-template-columns: 1fr;
     grid-gap: 0;
   }
-  .info-image{
-    justify-content: center;
-    border: solid 3px;
-    width: 87%;
-    transition: all 1s;
-    transform: skewX(5deg);
+
+  .info-image {
+    display: none;
+  }
+
+  .info-image-place {
+    padding: 0;
+    width: 65%;
+  }
+
+  .info-text {
+    width: 100%;
+  }
+
+  .footer-title {
+    display: none;
+  }
+
+  .project-container {
+    margin: 5%;
+    grid-template-columns: 1fr;
+  }
+
+  .cardBox {
+    width: 95%;
+    animation: mobilecardbox-loader 1.5s;
   }
 
 }
