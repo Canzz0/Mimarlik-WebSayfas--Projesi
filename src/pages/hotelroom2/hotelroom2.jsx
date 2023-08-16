@@ -9,6 +9,17 @@ import negy from './images/negy.jpg';
 import negz from './images/negz.jpg';
 document.getElementById('root').style.backgroundColor='white';
 function HotelRoom2() {
+    useEffect(() => {
+   
+        const rootDiv = document.getElementById('root'); 
+        rootDiv.classList.add('contact-root');
+    
+        return () => {
+          //Sayfadan çıkınca
+          rootDiv.classList.remove('contact-root');
+        };
+      }, []);
+    
     const canvasRef = useRef(null);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
