@@ -473,6 +473,7 @@ h1 {
 }
 
 .footer .social>a {
+  padding:5px;
   margin: 5px;
   font-size: 50px;
   width: 75px;
