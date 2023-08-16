@@ -1,6 +1,14 @@
-body {
-  background-image: url(../css/images/arkaplan.jpg);
+html{
+  width: 100%;
+}
+.root {
+  background: url(../css/images/arkaplan.jpg);
   background-repeat: no-repeat;
+  background-size: auto;
+}
+
+.contact-root {
+  background: white;
 }
 
 /* NAVBAR */
@@ -9,13 +17,25 @@ body {
   opacity: 1;
   color: white;
   width: 100%;
-  animation: nav-loader 1s;
+  animation: ease 1s;
 
 }
 
 .navbar-transparent {
   background: linear-gradient(.50turn, rgb(0, 0, 0), 47%, transparent);
 
+}
+
+.nav-item {
+  margin-right: 6px;
+  line-height: 12px;
+  border-color: rgb(255, 255, 255);
+  border-style: solid;
+  border-width: 0px 0px 2px;
+  font-size: 20px;
+  color: rgb(214, 214, 214);
+  font-weight: 500;
+  animation: nav-loader 1s;
 }
 
 @keyframes nav-loader {
@@ -30,17 +50,6 @@ body {
     top: 0%;
   }
 
-}
-
-.nav-item {
-  margin-right: 6px;
-  line-height: 12px;
-  border-color: rgb(255, 255, 255);
-  border-style: solid;
-  border-width: 0px 0px 2px;
-  font-size: 20px;
-  color: rgb(214, 214, 214);
-  font-weight: 500;
 }
 
 .navbar .nav-item:hover {
@@ -64,38 +73,37 @@ h1 {
 
 /* TİTLE */
 .Title {
+  top: 50%;
   text-align: center;
+  justify-content: center;
 }
 
 .title-row {
+  display: inline-block;
+  margin-top: 15%;
+  margin-bottom: 25%;
   width: 35%;
-  height: 14%;
+  height: 100%;
   color: rgb(255, 196, 0);
   background-color: transparent;
-  position: fixed;
   line-height: 75px;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  animation: loader 1s;
+  animation: title-loader 1s;
 }
 
 @keyframes loader {
   from {
     opacity: 0;
-    top: 100%;
 
   }
 
   to {
     opacity: 1;
-    top: 50%;
   }
 }
 
 .title-text {
-  animation: loader 1s;
+
   font-size: 78px;
   line-height: 78px;
   font-weight: 900;
@@ -109,16 +117,25 @@ h1 {
   transition: none 0s ease 0s;
   padding: 7px 22px 22px;
 }
+@keyframes title-loader {
+  from {
+    opacity: 0;
+    margin-top: 100%;
 
+  }
+
+  to {
+    opacity: 1;
+    margin-top: 15%;
+  }
+}
 /* //////////////////////////////////// */
 
 /* ABOUT */
 .about {
-  position: fixed;
+  background: linear-gradient(.0turn, rgb(0, 0, 0), 95%, transparent);
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  width: 95%;
   margin-top: 15rem;
   justify-content: center;
   align-items: center;
@@ -197,31 +214,35 @@ h1 {
   background-color: rgb(0, 0, 0);
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 10px 0px,
     rgba(0, 0, 0, 0.5) 0px 2px 25px 0px;
-    animation: cardbox-loader 1.5s;
+  animation: cardbox-loader 1.5s;
 }
 
 /* FOR PC */
 @keyframes cardbox-loader {
-  from{
+  from {
     margin-left: 100%;
-   
+
   }
-  to{
+
+  to {
     margin-left: 0%;
   }
 }
+
 /* //////////////////// */
 
 /* FOR MOBİLE */
 @keyframes mobilecardbox-loader {
-  from{
+  from {
     margin-top: 100%;
-   
+
   }
-  to{
+
+  to {
     margin-top: 0%;
   }
 }
+
 /* ////////////////////// */
 
 .card {
@@ -243,21 +264,25 @@ h1 {
   border-color: #000000;
   animation: card-loader 1.8s;
 }
+
 @keyframes card-loader {
-  from{
-   opacity: 0;
+  from {
+    opacity: 0;
   }
-  to{
+
+  to {
     opacity: 1;
   }
 }
+
 /* farklı fotoğraflar kullanabilmek için */
-#museum{
-    background: url('../css/images/museum.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
+#museum {
+  background: url('../css/images/museum.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-#room2{
+
+#room2 {
   background: url('../css/images/hotelroom2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -350,13 +375,16 @@ h1 {
 /* /////////////////////// */
 
 /* SLİDER */
-.slider {
-  display: flex;
-  justify-content: center;
-  height: 250px;
+
+.slider-wrapper {
+  margin-bottom: 25%;
+  background: white;
+  width: 100%;
+  height: 100%;
 }
 
 .slider-title {
+  display: block;
   margin: 20px;
   width: max-content;
   color: rgb(0, 0, 0);
@@ -365,6 +393,17 @@ h1 {
   border-bottom: 4px solid #000000;
   border-style: solid;
   border-width: 0px 0px 4px;
+}
+
+.slider {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider2 {
+  background-color: red;
+  width: 15px;
 }
 
 .slider-info {
@@ -380,8 +419,8 @@ h1 {
 .slider-image {
   margin: 20px;
   border: solid 25px;
-  width: 50%;
-  height: 75%;
+  width: 240px;
+  height: 240px;
   transition: all 1s;
   transform: skewX(5deg);
 }
@@ -471,7 +510,7 @@ h1 {
 
 /* INFO */
 .info-place {
-
+  background: white;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 15px;
@@ -528,7 +567,8 @@ h1 {
 _______--------------______________
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ 
 */
-@media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 763px) {
+
   .navbar-toggler {
     background-color: white;
   }
@@ -548,19 +588,24 @@ _______--------------______________
     grid-gap: 0;
   }
 
-  .info-image {
-    display: none;
-  }
 
   .info-image-place {
     padding: 0;
     width: 65%;
   }
-
+  .info-image{
+    width: 75%;
+    height: 75%;
+    border: solid 15px;
+  }
   .info-text {
     width: 100%;
   }
-
+  .slider-image{
+    width: 25%;
+    height: 35%;
+    border: solid 15px;
+  }
   .footer-title {
     display: none;
   }

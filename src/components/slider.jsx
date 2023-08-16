@@ -4,7 +4,9 @@ import { Link } from 'react-router-dom';
 function SliderComponent() {
     return (
         <>
-            <h1 className="slider-title">Hizmetlerimiz</h1>
+            <div className="row">
+            <div className='slider-wrapper'>
+                <h1 className="slider-title">Hizmetlerimiz</h1>
             <div className='slider'>
                 <Carousel height={240} width={830} yOrigin={42} yRadius={48} autoPlay={true} aut>
                     <div key={1} >
@@ -24,8 +26,13 @@ function SliderComponent() {
                 </div>
             </Carousel>
         </div>
-    </>
-      
+
+            </div>
+            </div>
+            
+
+        </>
+
     )
 }
 export default SliderComponent;

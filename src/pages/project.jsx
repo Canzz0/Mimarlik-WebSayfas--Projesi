@@ -1,11 +1,20 @@
-import React, { useState } from 'react';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import React, { useEffect, useState } from 'react';
 import ProjectComponent from '../components/project';
 import FooterComponent from '../components/footer';
 import LayoutComponent from '../components/layout';
 function ProjectPage() {
-    document.getElementById('root').style.backgroundColor='white';
-    const [activeTab] = useState('project'); // Başlangıçta "home" aktif
+    useEffect(() => {
+   
+        const rootDiv = document.getElementById('root'); 
+        rootDiv.classList.add('contact-root');
+    
+        return () => {
+          //Sayfadan çıkınca
+          rootDiv.classList.remove('contact-root');
+        };
+      }, []);
+    
+    const [activeTab] = useState('project'); 
     return (
         <>
             <LayoutComponent navClass={activeTab} />

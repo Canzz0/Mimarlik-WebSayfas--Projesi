@@ -1,17 +1,26 @@
-import React, { useState } from 'react';
-import { Parallax, ParallaxLayer } from '@react-spring/parallax'
+import React, { useEffect, useState } from 'react';
 import ContactComponent from '../components/contact';
 import FooterComponent from '../components/footer';
 import LayoutComponent from '../components/layout';
 function ContactPage() {
-    document.getElementById('root').style.backgroundColor='white';
-    const [activeTab, setActiveTab] = useState('contact'); // Başlangıçta "home" aktif
-    return (
-        <>
-            <LayoutComponent navClass={activeTab} />
-            <ContactComponent/>
-            <FooterComponent/>
-       </>
-    )
+  useEffect(() => {
+   
+    const rootDiv = document.getElementById('root'); 
+    rootDiv.classList.add('contact-root');
+
+    return () => {
+      //Sayfadan çıkınca
+      rootDiv.classList.remove('contact-root');
+    };
+  }, []);
+
+  const [activeTab] = useState('contact'); 
+  return (
+    <>
+      <LayoutComponent navClass={activeTab} />
+      <ContactComponent />
+      <FooterComponent />
+    </>
+  )
 }
 export default ContactPage;
