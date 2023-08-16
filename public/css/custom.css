@@ -1,7 +1,6 @@
-html{
-  width: 100%;
-}
+
 .root {
+  overflow-x: hidden;
   background: url(../css/images/arkaplan.jpg);
   background-repeat: no-repeat;
   background-size: auto;
