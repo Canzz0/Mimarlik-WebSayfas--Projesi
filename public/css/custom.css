@@ -3,7 +3,7 @@
   overflow-x: hidden;
   background: url(../css/images/arkaplan.jpg);
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size:contain;
 }
 
 .contact-root {
@@ -12,19 +12,20 @@
 
 /* NAVBAR */
 .navbar {
-  background: linear-gradient(to right, transparent, rgb(87, 87, 87), rgb(5, 4, 2));
+  background: black;
   opacity: 1;
   color: white;
   width: 100%;
-  animation: ease 1s;
+  animation: nav-loader 1s;
 
 }
-
 .navbar-transparent {
   background: linear-gradient(.50turn, rgb(0, 0, 0), 47%, transparent);
 
 }
-
+.navbar-brand{
+  color: white;
+}
 .nav-item {
   margin-right: 6px;
   line-height: 12px;
@@ -34,19 +35,19 @@
   font-size: 20px;
   color: rgb(214, 214, 214);
   font-weight: 500;
-  animation: nav-loader 1s;
+ 
 }
 
 @keyframes nav-loader {
   from {
     opacity: 0;
-    top: -50%;
+    margin-top: -25%;
 
   }
 
   to {
     opacity: 1;
-    top: 0%;
+    margin-top: 0%;
   }
 
 }
@@ -530,7 +531,6 @@ h1 {
 }
 
 .info-text {
-  width: 66.66666667%;
   padding: 15px;
   margin-top: 15px;
   text-align: center;
@@ -566,13 +566,20 @@ _______--------------______________
 /-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ 
 */
 @media only screen and (max-width: 763px) {
-
+  .root {
+    background-size:auto;
+  }
   .navbar-toggler {
-    background-color: white;
+    background-color: rgb(108, 108, 108);
+  }
+  .title-text{
+    font-size:45px;
+    font-weight: 600;
+
   }
 
   .about p {
-    font-size: 100%;
+    font-size: 75%;
   }
 
   .title-row {
@@ -589,7 +596,7 @@ _______--------------______________
 
   .info-image-place {
     padding: 0;
-    width: 65%;
+    width: 100%;
   }
   .info-image{
     width: 75%;
@@ -597,6 +604,7 @@ _______--------------______________
     border: solid 15px;
   }
   .info-text {
+    font-size: 15px;
     width: 100%;
   }
   .slider-image{
@@ -623,5 +631,7 @@ _______--------------______________
     width: 95%;
     animation: mobilecardbox-loader 1.5s;
   }
-
+  .footer-text{
+    font-size: 25px;
+  }
 }

@@ -2,7 +2,7 @@ function Info2Component(){
     return(
         <>
         <div className="row ">
-            <div className="info-place p-2">
+            <div className="info-place">
                 <div className="info-image-place">
                 <img className="info-image" src="../css/images/bina-2.png" alt="" />
                 </div>
