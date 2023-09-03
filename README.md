@@ -2,7 +2,7 @@
 
 ## Proje React+Threejs ile yapılmaktadır. 
 **Projemizi kısaca anlatmak gerekirsek.Projemiz bir mimarlık ofisi için tanıtım web sitesidir.Sitede ofis ile ilgili bilgiler alabilirsiniz.Ayrıca ofisin yapmış olduğu projeleri 3 boyutlu olarak inceleyebilirsiniz.**
-
+Web sitesinin linki:https://mimarlikofisi-pj3c3c9x7-canzz0.vercel.app/
 ![Ekran Görüntüsü (22)](https://github.com/Canzz0/Mimarlik-WebSayfas--Projesi/assets/78309558/080d6499-3a21-4497-bf6a-53afde1a53af)
 ![Ekran Görüntüsü (18)](https://github.com/Canzz0/Mimarlik-WebSayfas--Projesi/assets/78309558/7702ffb9-effc-4ea0-b2b0-868a3dc6bccb)
 ![Ekran Görüntüsü (19)](https://github.com/Canzz0/Mimarlik-WebSayfas--Projesi/assets/78309558/16ff229d-6a43-435b-b06e-363c7e3f901c)
