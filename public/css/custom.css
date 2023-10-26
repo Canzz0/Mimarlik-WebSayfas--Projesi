@@ -735,11 +735,15 @@ _______--------------______________
 
 
   .info-image-place {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 0;
     width: 100%;
   }
 
   .info-image {
+    transform: none;
     width: 75%;
     height: 75%;
     border: solid 15px;
