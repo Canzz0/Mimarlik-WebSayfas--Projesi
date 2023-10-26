@@ -13,7 +13,7 @@ function FooterComponent(){
                 'Kaliteli Hizmetin Tek Adresi'
             </span>
             <div className="row">
-            <h3 className="footer-title"> Mimarlık Ofisi © 2018</h3>
+            <h3 className="footer-title"> Mimarlık Ofisi © 2023</h3>
             </div>
         </footer>
     </div>
