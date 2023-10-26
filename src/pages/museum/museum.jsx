@@ -1,25 +1,26 @@
-import React, { useRef, useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import posx from './images/posx.jpg';
-import posy from './images/posy.jpg';
-import posz from './images/posz.jpg';
+import LoaderComponent from '../../components/loader';
 import negx from './images/negx.jpg';
 import negy from './images/negy.jpg';
 import negz from './images/negz.jpg';
-document.getElementById('root').style.backgroundColor='white';
+import posx from './images/posx.jpg';
+import posy from './images/posy.jpg';
+import posz from './images/posz.jpg';
+document.getElementById('root').style.backgroundColor = 'white';
 function Museum() {
     useEffect(() => {
-   
-        const rootDiv = document.getElementById('root'); 
+
+        const rootDiv = document.getElementById('root');
         rootDiv.classList.add('contact-root');
-    
+
         return () => {
-          //Sayfadan çıkınca
-          rootDiv.classList.remove('contact-root');
+            //Sayfadan çıkınca
+            rootDiv.classList.remove('contact-root');
         };
-      }, []);
-    
+    }, []);
+
     const canvasRef = useRef(null);
     const [loading, setLoading] = useState(true);
     useEffect(() => {
@@ -31,7 +32,7 @@ function Museum() {
         renderer.setSize(window.innerWidth, window.innerHeight);
         canvasRef.current.appendChild(renderer.domElement);
         camera.position.set(0, .5, 2);
-        
+
         const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
         scene.add(directionalLight);
 
@@ -43,7 +44,7 @@ function Museum() {
         controls.enableDamping = true;
         controls.dampingFactor = 0.05;
         controls.update();
-        
+
         loader.load(
             [posx, negx, posy, negy, posz, negz],
             () => {
@@ -57,7 +58,7 @@ function Museum() {
         );
         const animate = () => {
             requestAnimationFrame(animate);
-            controls.update(); 
+            controls.update();
             renderer.render(scene, camera);
         };
 
@@ -66,12 +67,12 @@ function Museum() {
 
     return <div ref={canvasRef}>
         {loading && (
-        <div style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', zIndex: 9999 }}>
-            Yükleniyor...
-        </div>
-    )}
+            <div className="d-flex justify-content-center align-items-center" style={{ backgroundColor: 'white', height: "100vh" }}>
+                <LoaderComponent />
+            </div>
+        )}
     </div>;
-    
+
 }
 
 export default Museum;
