@@ -1,10 +1,9 @@
 import React from 'react';
 import { Carousel } from 'react-carousel3';
-import { Link } from 'react-router-dom';
 function SliderComponent() {
     return (
         <>
-            <div className="row">
+            <div className="row  p-0 m-0">
             <div className='slider-wrapper'>
                 <h1 className="slider-title">Hizmetlerimiz</h1>
             <div className='slider'>
