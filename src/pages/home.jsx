@@ -60,7 +60,7 @@ function HomePage() {
             <div className="row">
                 <AboutComponent />
             </div>
-            <div className="row p-0 m-0">
+            <div  className="row slider-wrapper p-0 m-0">
                 <SliderComponent />
             </div>
 
